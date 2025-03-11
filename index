@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carter Holm</title>
+    <link rel="stylesheet" href="Body_CSS.css">
+</head>
+<body>
+    <header>
+        <h1>Carter Holm</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="goals.html">Future Goals</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="profile-section">
+            <img src="images/Prof_Headshot.jpg" alt="Professional Headshot of Carter Holm" class="profile-image">
+        </section>
+        
+        <section>
+            <p>I started this for an MIS class and decided to roll with it. Have fun looking around!</p>
+            <p>My goal is to inform you more about me in general wether you are looking for fun or professionally. I have been coding since 16 years old and have always found it interesting. As I decided on what to do with college I wanted to combine my technical passions with my social skills. This website is a great example of the combination because I have coded this from skratch and now I can show you more about my professional and personal experinces.</p>
+        </section>
+
+    </main>
+
+    <script>
+        function displayMessage() {
+            let message = document.getElementById("userMessage").value;
+            document.getElementById("displayText").innerText = "You said: " + message;
+        }
+    </script>
+</body>
+</html>
+
+
