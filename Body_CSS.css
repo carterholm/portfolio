@@ -192,46 +192,144 @@ main::before {
 
 /* Ensure header and timeline match the dark theme */
 .about-me-page header {
-  background-color: #1a1a1a !important;
-  padding: 20px 0;
+  background: url('Images/About_me_img') center/cover no-repeat;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  position: relative;
+}
+
+/* Dark overlay for readability */
+.about-me-page header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
 .about-me-page header h1 {
-  color: #ffcc00 !important;
-  font-size: 32px;
+  position: relative;
+  font-size: 45px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.8);
+  margin-bottom: 10px;
 }
 
-/* Timeline Styling */
-.about-me-page .timeline {
-  max-width: 700px;
-  margin: 50px auto;
-  padding: 20px;
-  background: #1a1a1a;
-  border-radius: 10px;
+/* Navigation Bar - Fixed but Below Title */
+.about-me-page nav {
+  position: fixed;
+  top: 250px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }
 
-.about-me-page .timeline-item {
-  padding: 20px;
-  margin-bottom: 30px;
-  border-left: 4px solid #ffcc00;
-  padding-left: 20px;
-  background: #222;
+.about-me-page nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.about-me-page nav ul li {
+  display: inline;
+}
+
+.about-me-page nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px 15px;
   border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.about-me-page nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffcc00;
+  transform: scale(1.1);
+}
+
+/* Underline effect on hover */
+.about-me-page nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #ffcc00;
+  transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
 
-.about-me-page .timeline-item:hover {
-  transform: scale(1.02);
+.about-me-page nav ul li a:hover::after {
+  transform: scaleX(1);
 }
 
-.about-me-page .timeline-item h2 {
+/* Add padding to body to prevent content from hiding behind fixed navbar */
+.about-me-page body {
+  padding-top: 270px;
+}
+
+/* About Me Section */
+.about-me-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px 20px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #ffcc00;
+  margin-bottom: 15px;
+}
+
+.about-text h2 {
   color: #ffcc00;
-  font-size: 24px;
 }
 
-.about-me-page .timeline-item p {
-  font-size: 18px;
-  color: #ddd;
+/* Hobbies Section */
+.hobbies-section, .experience-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: #222;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 50px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hobbies-section h2, .experience-section h2 {
+  color: #ffcc00;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-me-page nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 }

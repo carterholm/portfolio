@@ -1,10 +1,39 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> 
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
+    <link rel="stylesheet" href="Body_CSS.css">
 </head>
-<body>
-    
+<body class="resume-page">
+
+    <!-- Navigation Header -->
+    <header>
+        <h1>Resume</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="goals.html">Future Goals</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Resume Section -->
+    <main>
+        <section class="resume-container">
+            <h2>My Resume</h2>
+            <p>Below is my professional resume. You can view it online or download a PDF copy.</p>
+
+            <!-- Embedded Resume (Optional) -->
+            <iframe src="Resume_download.pdf" class="resume-viewer"></iframe>
+
+            <!-- Download Resume Link -->
+            <a href="Resume_download.pdf" class="download-button" download>Download Resume</a>
+        </section>
+    </main>
+
 </body>
 </html>
